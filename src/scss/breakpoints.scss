@@ -1,0 +1,377 @@
+// @import 'vars.scss';
+.burger {
+  display: none;
+}
+
+@media (max-width: $breakpoint1800) {
+  .progress__bar {
+    left: 50%;
+  }
+
+  .progress__display {
+    margin-left: 0;
+  }
+  .progress__offer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .progress__content {
+    margin: 70px auto;
+  }
+}
+@media (max-width: $breakpoint1400) {
+  .main {
+    flex-direction: column;
+    position: relative;
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: url(../img/main-img.png);
+      opacity: 0.3;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .main__content {
+    margin-bottom: 100px;
+    z-index: 15;
+    margin: 100px auto;
+  }
+  .main__img {
+    display: none;
+  }
+}
+@keyframes ani {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: $breakpoint1200) {
+  #nav {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    transform: translateX(150%);
+    animation: ani 1s forwards;
+
+    li {
+      background-color: #c24100;
+      border: 1px solid $white;
+      margin: 2px 0;
+      padding: 10px 10px 10px 35px;
+    }
+  }
+  .header__nav {
+    display: none;
+  }
+
+  .newsletter__content {
+    &::before {
+      left: 0;
+    }
+    &::after {
+      left: 0;
+    }
+  }
+  .review__content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .review__left {
+    width: 100%;
+    margin-bottom: 150px;
+  }
+  .achieve {
+    -webkit-background-size: auto;
+  }
+  .achieve__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .achieve__card {
+    justify-self: center;
+  }
+
+  .cards__offer {
+    justify-content: center;
+  }
+
+  .partners__company {
+    li {
+      margin-right: 20px;
+    }
+  }
+
+  .main__content {
+    text-align: center;
+  }
+  .main__title {
+    &::before {
+      left: 50%;
+    }
+  }
+
+  .header__top {
+    flex-direction: column;
+  }
+  .header__btn {
+    margin-top: 10px;
+    max-width: 173px;
+    width: 100%;
+  }
+  .header__offer {
+    position: relative;
+  }
+
+  .burger {
+    > .header__nav {
+      display: block;
+    }
+  }
+  .burger {
+    left: 95%;
+    top: 48px;
+    display: block;
+    width: 3rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+
+    &:before,
+    &::after,
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      left: 0;
+      position: absolute;
+    }
+    &:before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    &:before,
+    &::after {
+      content: '';
+    }
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity 0.2 linear;
+    }
+
+    &.active {
+      span {
+        opacity: 0;
+      }
+      &:before,
+      &::after {
+        top: 50%;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .header__btn {
+    display: inline;
+  }
+}
+
+@media (max-width: $breakpoint992) {
+  .footer__social {
+    margin-right: 0;
+    margin-bottom: 65px;
+  }
+  .footer__links {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footer__social-links {
+    justify-content: center;
+  }
+  .footer__content {
+    margin-top: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .newsletter__content {
+    padding: 50px;
+  }
+
+  .price__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price__card {
+    &.standart {
+      margin-bottom: 30px;
+    }
+  }
+
+  .progress__bar {
+    left: 35px;
+  }
+
+  .achieve {
+    margin-top: 130px;
+  }
+
+  .progress__title {
+    margin-top: 20px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .partners__company {
+    li {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint768) {
+  .block-slider__block {
+    right: 0;
+  }
+}
+
+@media (max-width: $breakpoint600) {
+  .block-slider__comment-raiting {
+    left: 25px;
+    top: 115px;
+    justify-content: flex-start;
+  }
+  .review__img {
+    width: 80%;
+  }
+  .swiper-buttons {
+    bottom: -10%;
+  }
+
+  .newsletter__text {
+    line-height: 38px;
+    font-size: 22px;
+  }
+
+  .achieve__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: $breakpoint480) {
+  .cards__info-title {
+    font-size: 25px;
+    line-height: 24px;
+  }
+  .main__title {
+    &::before {
+      width: 320px;
+    }
+  }
+  .block-slider__comment-raiting {
+    top: 100px;
+  }
+  .block-slider__man {
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .review__left-title {
+    font-size: 25px;
+  }
+  .block-slider__man {
+    margin-top: 35px;
+  }
+  .block-slider__comment {
+    p {
+      font-size: 12px;
+    }
+  }
+  .price__btns {
+    button {
+      margin: 10px 5px;
+    }
+  }
+  .newsletter__form {
+    display: block;
+
+    &.btn {
+      margin: 0;
+    }
+  }
+  .newsletter__content {
+    padding: 25px;
+  }
+
+  .price__card-privileges {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    li {
+      font-size: 12px;
+      margin-left: 100px;
+      margin: 0 auto;
+    }
+  }
+  .price__card-btn {
+    font-size: 17px;
+  }
+  .price__card-price {
+    font-size: 75px;
+  }
+
+  .progress__icons {
+    align-items: self-start;
+    flex-direction: column;
+  }
+  .progress__item-second {
+    margin-left: 0;
+    margin-top: 5px;
+    &::before {
+      top: 30px;
+      left: -33px;
+    }
+  }
+
+  .main__title {
+    font-size: 37px;
+    display: block;
+    span {
+      font-size: 48px;
+    }
+  }
+  .main__btn {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $breakpoint320) {
+  .price__btns button:first-child {
+    margin-right: 0px;
+  }
+}

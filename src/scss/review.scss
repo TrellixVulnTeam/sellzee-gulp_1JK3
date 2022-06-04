@@ -1,0 +1,55 @@
+.review {
+  overflow: hidden;
+  margin-top: 85px;
+  margin-bottom: 80px;
+  &__offer {
+    color: #05000b;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 59px;
+  }
+
+  &__subtitle {
+    max-width: 494px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  &__content {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    min-width: 0;
+    position: relative;
+  }
+  &__left-title {
+    font-weight: 600;
+    font-size: 31px;
+  }
+
+  &__right {
+    position: relative;
+    &::after {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      right: 0;
+      background: url(../img/review.svg);
+      width: 125px;
+      height: 125px;
+    }
+  }
+}

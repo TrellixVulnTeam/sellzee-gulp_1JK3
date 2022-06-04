@@ -1,0 +1,36 @@
+.container {
+  max-width: $containerWidth;
+  padding: $containerPadding;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint1200) {
+    max-width: 1160px;
+  }
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+body {
+  font-family: $fontMain;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,71 @@
+.footer {
+  background: url(../img/footer.jpg);
+  // height: 434px;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: cover; /* Современные браузеры */
+  background-repeat: no-repeat;
+
+  &__content {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    color: $white;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__social {
+    margin-right: 180px;
+    &-links {
+      margin-top: 25px;
+      display: flex;
+      li {
+        margin-right: 15px;
+      }
+    }
+  }
+  &__link {
+    li {
+      line-height: 26px;
+      font-weight: 500;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__help {
+    li {
+      line-height: 26px;
+      font-weight: 500;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+  }
+
+  &__download {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      line-height: 26px;
+      font-weight: 500;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.cards {
+  padding-top: 65px;
+  background: #fff9f5;
+
+  &__offer {
+    margin-bottom: 75px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__info {
+    max-width: 360px;
+    width: 100%;
+  }
+
+  &__info-heading {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #ff5a05;
+  }
+
+  &__info-title {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 40px;
+
+    color: #05000b;
+  }
+
+  &__info-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #05000b;
+
+    opacity: 0.7;
+  }
+}
+.card {
+  &__block {
+    padding: 36px;
+
+    max-width: 358px;
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid rgba(66, 82, 207, 0.1);
+    border-radius: 10px;
+    transition: all 0.35s linear;
+    cursor: pointer;
+
+    &:hover {
+      background: #4252cf;
+      .card__title {
+        color: $white;
+      }
+      .card__text {
+        color: $white;
+        opacity: 0.8;
+      }
+      .card__img {
+        -webkit-filter: grayscale(100) brightness(200);
+        filter: grayscale(100) brightness(200);
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__title {
+    padding-bottom: 9px;
+    padding-top: 19px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #05000b;
+  }
+
+  &__text {
+  }
+}

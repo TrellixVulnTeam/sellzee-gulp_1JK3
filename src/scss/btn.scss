@@ -1,0 +1,87 @@
+.btn {
+  background: #ff5a05;
+  border-radius: 4px;
+  border: 1px solid #ff5a05;
+  padding: 15px 30px;
+  color: $white;
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    -webkit-box-shadow: 0 0 4px #999;
+    -moz-box-shadow: 0 0 4px #999;
+    -o-box-shadow: 0 0 4px #999;
+    box-shadow: 0 0 21px #999;
+    text-shadow: 0 1px 2px #333;
+  }
+
+  &.sm {
+    padding: 10px 30px;
+  }
+  &.db {
+    display: block;
+  }
+  &.change {
+    background: rgba(255, 90, 5, 0.1);
+    color: #ff5a05;
+    border: 1px solid $white;
+    transition: all 0.2s linear;
+    &:hover {
+      background: #ff5a05;
+      border: 1px solid #ff5a05;
+      color: $white;
+    }
+  }
+  &.op {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 20px;
+    color: $white;
+  }
+}
+
+// hover effect
+.op {
+  border: 1px solid $white;
+  background-color: #fff;
+  font-size: 20px;
+  overflow: hidden;
+  outline: medium none;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+.op:hover {
+  -webkit-box-shadow: 0 0 4px #999;
+  -moz-box-shadow: 0 0 4px #999;
+  -o-box-shadow: 0 0 4px #999;
+  box-shadow: 0 0 4px #999;
+}
+.op::after {
+  background-color: #ff5a05;
+  left: 50%;
+  top: 50%;
+  height: 0;
+  width: 150%;
+  transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  position: absolute;
+  content: '';
+  transition: all 0.75s ease 0s;
+  z-index: -1;
+}
+.op:hover::after {
+  height: 450%;
+  opacity: 1;
+}
+.op:hover,
+.op:active {
+  color: #fff;
+  text-shadow: 0 1px 2px #333;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
